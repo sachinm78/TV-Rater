@@ -1,15 +1,17 @@
-<h1>Edit <%= @show.title %></h1>
-<% if @show.errors %>
-  <%  @show.errors.full_messages.each do |error| %>
-    <%= error %>
+<div class="container"> 
+  <h1>Edit <%= @show.title %></h1>
+  <% if @show.errors %>
+    <%  @show.errors.full_messages.each do |error| %>
+      <%= error %>
+    <%end%>
   <%end%>
-<%end%>
 
-<%= form_for [@user, @show] do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %><br />
-    <%= f.label :genre %>
-    <%= f.text_field :genre %><br />
-    <br />
-    <%= f.submit %>
-<% end %>
+  <%= form_for [@user, @show] do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %><br />
+      <%= f.label :genre %>
+      <%= f.text_field :genre %><br />
+      <br />
+      <%= f.submit %>
+  <% end %>
+</div>
